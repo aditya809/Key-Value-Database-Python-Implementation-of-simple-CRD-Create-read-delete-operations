@@ -1,0 +1,16 @@
+PYTHON  COMMANDS WRITTEN TO USE THE PROGRAM.
+
+import code as c
+c.create("769004","Rourkela","Odisha")
+c.create("751003","Bhubaneswar","Odisha")
+c.read("769004")
+c.read("751003")
+c.delete("769004")
+
+One can access these using multiple threads like
+t1=Thread(target=(create or read or delete),args=(key_name,value,timeout))   #as per the operation
+t1.start()
+t1.sleep()
+t2=Thread(target=(create or read or delete),args=(key_name,value,timeout))   #as per the operation
+t2.start()
+t2.sleep()
